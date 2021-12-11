@@ -1,0 +1,42 @@
+textarea {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  padding-top: 2px;
+  margin-top: 3px;
+  border-bottom-width: 3px;
+  resize: none;
+  outline: 0;
+}
+
+button {
+  background-color: #4056a1;
+  font-family: 'Bungee', sans-serif;
+  color: white;
+  border-width: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color: #5c6da7;
+  color: white;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+.form-button-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-tweet-h2 {
+  display: flex;
+  justify-content: center;
+}
