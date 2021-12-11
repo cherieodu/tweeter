@@ -9,7 +9,7 @@ span {
   margin-left: 1.5em;
 }
 
-.container {
+.nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
