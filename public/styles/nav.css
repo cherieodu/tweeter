@@ -21,3 +21,7 @@ span {
   flex-direction: column;
   margin-right: 1.5em;
 }
+
+header h2 {
+  font-weight: normal;
+}
