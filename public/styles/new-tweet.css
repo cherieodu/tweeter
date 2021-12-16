@@ -40,3 +40,15 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+
+.over {
+  color: red;
+}
+
+.under {
+  color: #545149;
+}
+
+output {
+  font-family: 'Bungee', sans-serif;
+}
