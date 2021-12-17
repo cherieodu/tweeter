@@ -12,7 +12,7 @@ $(document).ready(function() {
       log.removeClass("under");
       log.addClass("over");
     } else {
-      log.text(currentLength);
+      log.text(maxLength - currentLength);
       log.removeClass("over");
       log.addClass("under");
     }
