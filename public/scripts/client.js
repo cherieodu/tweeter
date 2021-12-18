@@ -34,7 +34,7 @@ $(document).ready(function(){
         <p class="tweet"><b>${tweetData.content.text}</b></p>
         <hr>
         <footer>
-          <p>${tweetData.created_at}</p>
+          <p>${timeago.format(tweetData.created_at)}</p>
           <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -47,8 +47,8 @@ $(document).ready(function(){
   };
 
   const renderTweets = (data) => {
-    for (let tweetData of data) {
-      const $tweet = createTweetElement(tweetData);
+    for (let i = data.length - 1; i > 0; i--) {
+      const $tweet = createTweetElement(data[i]);
       $('article.tweets-container').append($tweet);
     }
   };
