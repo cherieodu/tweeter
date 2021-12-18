@@ -25,11 +25,14 @@ $(document).ready(function(){
         $("#error").remove();
         $("#for-error").remove();
         $("div.error").remove();
-      }
+      };
       event.preventDefault();
       let data = $(this).serialize();
       $.ajax('/tweets', { method: 'POST', data})
-      .done(loadTweets);
+      .done(function() {
+        $("textarea").val("");
+        loadTweets();
+      });
     }
   })
 
