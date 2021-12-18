@@ -15,12 +15,17 @@ $(document).ready(function(){
   $("form").submit(function(event) {
     let count = 140 - $("output").text();
     if (count > 140) {
-      alert('Text too long');
+      $("main").prepend('<br><center><div class="error"><i class="fas fa-exclamation-triangle"></i>Text too long!</div></center>');
       event.preventDefault();
     } else if (count < 1) {
-      alert('Text is empty');
+      $("main").prepend('<br id="error"><center id="for-error"><div class="error"><i class="fas fa-exclamation-triangle"></i>Text is empty!</div></center>');
       event.preventDefault();
     } else {
+      if ($("#error")) {
+        $("#error").remove();
+        $("#for-error").remove();
+        $("div.error").remove();
+      }
       event.preventDefault();
       let data = $(this).serialize();
       $.ajax('/tweets', { method: 'POST', data})

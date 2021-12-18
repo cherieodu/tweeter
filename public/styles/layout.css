@@ -100,3 +100,18 @@ footer div i {
 footer div i:hover {
   color: #e9d81f
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ff0000;
+  height: 32px;
+  width: 240px;
+  background-color: #ffd4d4;
+  color: rgb(177, 34, 34);
+}
+
+div.error i {
+  color: #ff0000;
+  margin-right: 10px;
+}
