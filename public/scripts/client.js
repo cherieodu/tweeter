@@ -5,6 +5,17 @@
  */
 
 $(document).ready(function(){
+  $("form").submit(function(event) {
+    event.preventDefault();
+    let data = $(this).serialize();
+    console.log(data);
+    $.ajax('/tweets', { method: 'POST', data});
+  })
+
+
+
+
+  //CREATING DYNAMIC TWEETS
   const createTweetElement = (tweetData) => {
     const $tweet = `
     <br>
