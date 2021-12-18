@@ -16,7 +16,9 @@ $(document).ready(function(){
   $("form").submit(function(event) {
     event.preventDefault();
     let data = $(this).serialize();
-    $.ajax('/tweets', { method: 'POST', data});
+    $.ajax('/tweets', { method: 'POST', data})
+    .done(loadTweets);
+
   })
 
   //CREATING DYNAMIC TWEETS
