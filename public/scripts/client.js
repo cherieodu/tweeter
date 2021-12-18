@@ -6,19 +6,26 @@
 
 $(document).ready(function(){
   const loadTweets = () => {
-  $.ajax('/tweets', { method: 'GET', dataType: 'json', success: function(data) {
-    renderTweets(data);
-   } })
-   
+    $.ajax('/tweets', { method: 'GET', dataType: 'json', success: function(data) {
+      renderTweets(data);
+     }})
   };
 
   //FORM SUBMISSION USING JQUERY/AJAX
   $("form").submit(function(event) {
-    event.preventDefault();
-    let data = $(this).serialize();
-    $.ajax('/tweets', { method: 'POST', data})
-    .done(loadTweets);
-
+    let count = 140 - $("output").text();
+    if (count > 140) {
+      alert('Text too long');
+      event.preventDefault();
+    } else if (count < 1) {
+      alert('Text is empty');
+      event.preventDefault();
+    } else {
+      event.preventDefault();
+      let data = $(this).serialize();
+      $.ajax('/tweets', { method: 'POST', data})
+      .done(loadTweets);
+    }
   })
 
   //CREATING DYNAMIC TWEETS
@@ -47,9 +54,10 @@ $(document).ready(function(){
   };
 
   const renderTweets = (data) => {
-    for (let i = data.length - 1; i > 0; i--) {
-      const $tweet = createTweetElement(data[i]);
-      $('article.tweets-container').append($tweet);
+    
+    for (let tweetData of data) {
+      const $tweet = createTweetElement(tweetData);
+      $('article.tweets-container').prepend($tweet);
     }
   };
 
