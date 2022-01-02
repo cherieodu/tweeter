@@ -37,34 +37,36 @@
         <center><i class="fas fa-angle-double-down"></i></center>
       </div>
     </nav>
-    <header class="nav">
-      <div>
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2><b>Chérie</b>  Oduwole</h2>
-      </div>
-    </header>
+    <div class="breakpoint">
+      <header class="nav">
+        <div>
+          <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2><b>Chérie</b>  Oduwole</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2 class="new-tweet-h2">Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-          <label for="tweet-text"><strong>What are you humming about?</strong></label><br>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="form-button-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <br>
-      <br>
-      <article class="tweets-container"></article>
-      <br>
-      <br>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2 class="new-tweet-h2">Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <label for="tweet-text"><strong>What are you humming about?</strong></label><br>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="form-button-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <br>
+        <br>
+        <article class="tweets-container"></article>
+        <br>
+        <br>
+      </main>
+    </div>
   </body>
 </html>
