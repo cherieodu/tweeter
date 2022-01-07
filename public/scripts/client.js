@@ -38,15 +38,22 @@ $(document).ready(function(){
 
   //CREATING DYNAMIC TWEETS
   const createTweetElement = (tweetData) => {
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     const $tweet = `
     <br>
       <article class="tweet-box">
         <header>
-          <img src=${tweetData.user.avatars}/>
-          <p class="name">${tweetData.user.name}</p>
-          <p class="handle">${tweetData.user.handle}</p>
+          <img src=${escape(tweetData.user.avatars)}/>
+          <p class="name">${escape(tweetData.user.name)}</p>
+          <p class="handle">${escape(tweetData.user.handle)}</p>
         </header>
-        <p class="tweet"><b>${tweetData.content.text}</b></p>
+        <p class="tweet"><b>${escape(tweetData.content.text)}</b></p>
         <hr>
         <footer>
           <p>${timeago.format(tweetData.created_at)}</p>
