@@ -5,10 +5,17 @@
  */
 
 $(document).ready(function(){
-  const loadTweets = () => {
-    $.ajax('/tweets', { method: 'GET', dataType: 'json', success: function(data) {
-      renderTweets(data);
-     }})
+  const loadTweets = (isNewTweet=false) => {
+    if (isNewTweet === false) {
+      $.ajax('/tweets', { method: 'GET', dataType: 'json', success: function(data) {
+        renderTweets(data);
+       }})
+    } else {
+      $.ajax('/tweets', { method: 'GET', dataType: 'json', success: function(data) {
+        renderTweets([data[data.length - 1]]);
+       }})
+    }
+    
   };
 
   //FORM SUBMISSION USING JQUERY/AJAX
@@ -31,7 +38,7 @@ $(document).ready(function(){
       $.ajax('/tweets', { method: 'POST', data})
       .done(function() {
         $("textarea").val("");
-        loadTweets();
+        loadTweets(true);
       });
     }
   })
