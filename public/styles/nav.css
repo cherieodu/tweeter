@@ -22,8 +22,14 @@ span {
 .right-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header h2 {
   font-weight: normal;
+}
+
+nav i {
+  color: #fe1500;
 }
