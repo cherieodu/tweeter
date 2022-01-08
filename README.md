@@ -15,3 +15,4 @@ Tweeter is a simple, responsive single-page Twitter clone.
 
 ## Final Product
 
+![Tweeter app screenshot](https://github.com/cherieodu/tweeter/blob/master/public/images/TweeterDesktop.JPG?raw=true)
