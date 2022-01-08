@@ -125,10 +125,14 @@ main {
   .breakpoint {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
   }
 
   main {
     margin-top: 180px;
-    width: 60%;
+    width: 55%;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
   }
+
 }
