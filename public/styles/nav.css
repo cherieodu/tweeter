@@ -5,11 +5,11 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 1.5em;
 }
 
 span {
   font-family: 'Bungee', sans-serif;
-  margin-left: 1.5em;
 }
 
 .nav-container {
@@ -22,7 +22,6 @@ span {
 .right-content {
   display: flex;
   flex-direction: column;
-  margin-right: 1.5em;
 }
 
 header h2 {
